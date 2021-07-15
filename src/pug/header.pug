@@ -1,10 +1,17 @@
 //header
 .header 
   .container
-
-
-                     
-          
-
-
-            
+    .header__logo
+      include ../svg/site-logo-corebiz-preto-cinza.svg
+    .header__search
+      input(placeholder='O que está procurando?')
+      button(type='button')
+        include ../svg/icon-search.svg
+    .header__account
+      a(href='#')
+        include ../svg/icon-user.svg
+        span Minha Conta
+    .header__minicart
+      include ../svg/icon-cart.svg
+      .counter
+        span 0

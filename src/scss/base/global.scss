@@ -9,7 +9,7 @@ html {
 
 body {
   position: relative;
-  font-family: $f-base;
+  font-family: $f-base !important;
   font-size: $f-size;
   color: $f-color;
   width: 100%;
@@ -21,9 +21,18 @@ body {
   }
 }
 
+span, a, p, h1, h2, h3, h4, h5 {
+  font-family: $f-base !important;
+}
 a,
 img { display: block; }
 
+input{font-family: $f-base; color: $c-black;}
+
+button {
+  border: none;
+  background: none;
+}
 
 *,
 *::before,

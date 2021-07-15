@@ -52,14 +52,19 @@ select,
 a {
   cursor: pointer;
   &:focus {
-    color: #C39E47;
     text-decoration: none;
   }
 }
 
 a {
+  &:link    { color: black; }
+  &:visited { color: black; }
+  text-decoration: none;
   &:hover {
-    color: #C39E47;
     text-decoration: none;
   }
+}
+
+input {
+  outline: none;
 }

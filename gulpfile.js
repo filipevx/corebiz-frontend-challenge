@@ -42,7 +42,7 @@ var sassProdOptions = {
 gulp.task ('gulppug', function(){
   return gulp.src('src/pug/*.pug')
   .pipe(pug({pretty: true}))
-  .pipe( gulp.dest('build/template'));
+  .pipe( gulp.dest('build'));
 });
 
 // Task 'sassprod' - Run with command 'gulp sassprod'

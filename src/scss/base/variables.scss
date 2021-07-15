@@ -35,13 +35,15 @@ $b-lg-max: 1200px;//desktop max
 //color
 $c-black: #000;
 $c-white: #fff;
+$c-gray: #7A7A7A;
 $c-error: #f00;
-$c-primary: #000;
+$c-red: #F8475F;
+$c-primary: $c-gray;
 $c-secondary: #000;
 
 
 //font
-$f-base: "Roboto","sans-serif", "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif, "Apple Color Emoji";
+$f-base: "Nunito","sans-serif", "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif, "Apple Color Emoji";
 $f-color: $c-black;
 $f-size-xs: 10px;
 $f-size-sm: 12px;

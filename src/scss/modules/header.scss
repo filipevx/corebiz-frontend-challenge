@@ -1,4 +1,57 @@
 .header {
+	padding: $s-md;
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__logo {
+
+	}
+	&__search {
+		position: relative;
+		width: 50%;
+		padding: $s-sm 0;
+		border-bottom: 1px solid $c-primary;
+		input {
+			width: 100%;
+			border: none;
+		}
+		button {
+			position: absolute;
+			right: 0;
+			top: $s-sm;
+		}
+	}
+	&__account {
+		a {
+			display: flex;
+			align-items: flex-end;
+		}
+		svg {
+			margin-right: $s-xs;
+		}
+		span {
+			color: $c-primary;
+		}
+	}
+	&__minicart {
+		display: flex;
+		align-items: flex-end;
+		svg {
+			margin-right: $s-xs;
+		}
+		.counter {
+			background: $c-red;
+			color: $c-white;
+			border-radius: 100%;
+			width: 14px;
+			height: 14px;
+			text-align: center;
+			font-size: $f-size-xs;
+			padding: 2px;
+		}
+	}
 }
 
 @include mobile { 			
