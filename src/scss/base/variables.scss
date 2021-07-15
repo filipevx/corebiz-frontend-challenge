@@ -1,0 +1,77 @@
+// =========================================================
+//
+//  PROJECT SCSS VARIABLES
+//  ---------
+//
+//  Pay attention on prefixes when adding new variables
+//
+//  Colors: $c-
+//  Fonts: $f-
+//  Breakpoint: $b-
+//  Space (margin and padding): $s-
+//  Transition: $t-
+//
+//  Sizes:
+//  xs: extra small
+//  sm: small
+//  md: medium
+//  lg: large
+//  xl: extra large
+//  hg: huge
+//  xh: extra huge
+//
+// =========================================================
+
+
+//breakpoint
+$b-sm-min: 320px;//mobile min
+$b-sm-max: 575px;//mobile max
+$b-md-min: 768px;//tablet min
+$b-md-max: 991px;//tablet max
+$b-lg-min: 1140px;//desktop min
+$b-lg-max: 1200px;//desktop max
+
+
+//color
+$c-black: #000;
+$c-white: #fff;
+$c-error: #f00;
+$c-primary: #000;
+$c-secondary: #000;
+
+
+//font
+$f-base: "Roboto","sans-serif", "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif, "Apple Color Emoji";
+$f-color: $c-black;
+$f-size-xs: 10px;
+$f-size-sm: 12px;
+$f-size-md: 14px;
+$f-size-sd: 16px;
+$f-size-lg: 18px;
+$f-size-xl: 36px;
+$f-size-hg: 48px;
+$f-size-xh: 72px;
+$f-size: $f-size-md;
+
+
+//space
+$s-xs: 5px;
+$s-sm: 10px;
+$s-md: 20px;
+$s-lg: 30px;
+$s-xl: 40px;
+$s-hg: 50px;
+$s-xh: 60px;
+
+
+//grid
+$grid: 12;
+$g-max-width: 1260px;
+$g-spacing: $s-sm;
+
+
+//transition
+$t-fast: 0.1s;
+$t-normal: 0.3s;
+$t-slow: 0.6s;
+$t: all $t-normal linear;

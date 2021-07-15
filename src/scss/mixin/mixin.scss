@@ -1,0 +1,23 @@
+@mixin tablet-setup {
+  @media screen and (max-width: $b-stp-break) {
+    @content
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: $b-md-max) {
+    @content
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: $b-sm-max) {
+    @content
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $b-lg-min) {
+    @content
+  }
+}

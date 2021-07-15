@@ -1,0 +1,39 @@
+block vars
+  - var pageTitle = ''
+  - var bodyClass = ''    
+
+doctype html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+html(xmlns="http://www.w3.org/1999/xhtml", lang="pt-br")
+   
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+    meta(name="format-detection", content="telephone=no")
+    link(href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet")
+    link(href="./css/style.min.css" rel="stylesheet") 
+    script(src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous")
+    meta(name='description', content='Corebiz Frontend Challenge')
+    meta(name='keywords', content='Corebiz, Frontend, Challenge')
+    title Corebiz Frontend Challenge 
+
+  block head
+
+  body(class= bodyClass)
+    
+    header
+      block header
+        include ../Header
+
+    main
+      block content
+    
+    footer
+      include ../Footer
+    
+    block scripts
+    script(src="./js/slick.min.js" type="text/javascript")
+    script(src="./js/main.js" type="text/javascript")     
+
+    
