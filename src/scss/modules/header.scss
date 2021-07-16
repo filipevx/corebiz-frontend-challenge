@@ -6,7 +6,16 @@
 		align-items: center;
 	}
 	&__logo {
-
+		svg {
+			path {
+				transition: $t-normal;
+			}
+		}
+		&:hover {
+			svg path {
+				fill: $c-red;
+			}
+		}
 	}
 	&__search {
 		position: relative;
@@ -21,37 +30,68 @@
 			position: absolute;
 			right: 0;
 			top: $s-sm;
+			transition: $t-normal;
+			svg path {
+				transition: $t-normal;
+			}
+			&:hover {
+				top: $s-sm - 1px;
+				svg path {
+					fill: $c-red;
+				}
+			}
 		}
 	}
 	&__account {
 		a {
 			display: flex;
 			align-items: flex-end;
-		}
-		svg {
-			margin-right: $s-xs;
-		}
-		span {
-			color: $c-primary;
+			svg {
+				margin-right: $s-xs;
+				path {
+					transition: $t-normal;
+				}
+			}
+			span {
+				color: $c-primary;
+				transition: $t-normal;
+			}
+			&:hover {
+				svg path{
+					fill: $c-red;
+				}
+				span {
+					color: $c-red;
+				}				
+			}
 		}
 	}
 	&__minicart {
 		a {
 			display: flex;
 			align-items: flex-end;
-		}
-		svg {
-			margin-right: $s-xs;
-		}
-		.counter {
-			background: $c-red;
-			color: $c-white;
-			border-radius: 100%;
-			width: 14px;
-			height: 14px;
-			text-align: center;
-			font-size: $f-size-xs;
-			padding: 2px;
+			svg {
+				margin-right: $s-xs;
+				path {
+					transition: $t-normal;
+
+				}
+			}
+			.counter {
+				background: $c-red;
+				color: $c-white;
+				border-radius: 100%;
+				width: 14px;
+				height: 14px;
+				text-align: center;
+				font-size: $f-size-xs;
+				padding: 2px;
+			}
+			&:hover {
+				svg path{
+					fill: $c-red;
+				}
+			}
 		}
 	}
 }
