@@ -1,3 +1,25 @@
 // Footer
 .footer
-  .container
+  .footer__newsletter
+    .container
+      h3 Participe de nossas news com promoções e novidades!
+      form
+        input(type='text' placeholder='Digite seu nome')
+        input(type='email' placeholder='Digite seu email')
+        button(type='submit') Eu quero!
+  .footer__main
+    .container
+      .footer__area.footer__area--location
+        h3 Localização
+        p Avenida Andrômeda, 2000. Bloco 6 e 8 
+        p Alphavile SP
+        a(href='mailto:brasil@corebiz.ag') brasil@corebiz.ag
+        a(href='tel:+551130901039') +55 11 3090 1039
+      .footer__area.footer__area--contact
+        a(href='mailto:brasil@corebiz.ag')
+          include ../svg/icon-mail.svg
+          span ENTRE EM CONTATO
+        a(href='mailto:brasil@corebiz.ag')
+          include ../svg/icon-atendimento.svg
+          span FALE COM O NOSSO CONSULTOR ONLINE
+      .footer__area.footer__area--contact

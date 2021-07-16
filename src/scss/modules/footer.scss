@@ -1,5 +1,9 @@
 .footer {
-
+	background: $c-black;
+	color: $c-white;
+	&__newsletter {
+		background: $c-bg;
+	}
 }
 
 @include mobile {
