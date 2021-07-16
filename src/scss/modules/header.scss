@@ -35,7 +35,6 @@
 				transition: $t-normal;
 			}
 			&:hover {
-				top: $s-sm - 1px;
 				svg path {
 					fill: $c-red;
 				}

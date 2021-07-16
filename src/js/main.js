@@ -19,6 +19,7 @@ $( document ).ready(function() {
 	      $('.home__shelf .container ul.shelf').append(
 	        `<li class="shelf__item">
 	          <img class='shelf__image' src="${s.imageUrl}"/>
+			  ${ s.listPrice ? `<span class='shelf__flag shelf__flag--off'>off</span> </span>` : "" }
 	          <div class='shelf__content'>
 		          <p class='shelf__name'>${s.productName}</p>
 		          <span class='shelf__rating shelf__rating--${s.stars}'>${s.stars}</span>

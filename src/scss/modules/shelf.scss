@@ -1,7 +1,23 @@
 .shelf {
 	margin: 0 -45px;
+	&__flag {
+		position: absolute;
+		right: 40px;
+		top: 0;
+		font-size: 0;
+		&--off {
+			display: block;
+			content: '';
+			background-image: url('../img/flag-off.png');
+			background-size: contain;
+			background-repeat: no-repeat;	
+			width: 81px;
+			height: 72px;		
+		}
+	}
 	&__item {
 		padding: 0 40px;
+		position: relative;
 
 	}
 	&__image {
