@@ -1,0 +1,33 @@
+.slick-slider {
+	.slick-arrow {
+		font-size: 0;
+		display: block;
+		position: absolute;
+		top: calc(50% - 22px);
+		z-index: 5;
+		transition: $t-normal;
+		&:after {
+			content: '';
+			display: block;
+			background-image: url('../img/arrow.png');
+			background-size: contain;
+			background-repeat: no-repeat;
+			width: 22px;
+			height: 22px;;
+
+		}
+		&:hover {
+			opacity: .5;
+		}
+	}
+	.slick-prev {
+		left: 0;
+		&:after {
+			transform: rotate(-180deg);
+
+		}
+	}
+	.slick-next {
+		right: 0;
+	}
+}

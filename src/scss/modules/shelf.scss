@@ -1,0 +1,72 @@
+.shelf {
+	margin: 0 -45px;
+	&__item {
+		padding: 0 40px;
+
+	}
+	&__image {
+		width: 100%;
+		height: auto;
+	}
+	&__content {
+		padding: 15px 0 25px;
+		text-align: center;
+		span {
+			display: block;
+		}
+	}
+
+	&__name {
+		color: $c-primary;
+		font-size: $f-size-sm;
+		text-transform: uppercase;
+	}
+	&__rating {
+		content: '';
+		margin: $s-sm auto;
+		font-size: 0;
+		background-size: contain;
+		background-repeat: no-repeat;
+		width: 68px;
+		height: 11px;
+		&--1 {
+			background-image: url('../img/Rating-1.png');
+		}
+		&--2 {
+			background-image: url('../img/Rating-2.png');
+		}
+		&--3 {
+			background-image: url('../img/Rating-3.png');
+		}
+		&--4 {
+			background-image: url('../img/Rating-4.png');
+		}
+		&--5 {
+			background-image: url('../img/Rating-5.png');
+		}
+	}
+	&__bestprice {
+		color: $c-black;
+		font-weight: 700;
+		font-size: $f-size-lg;
+		margin: $s-xs 0;
+	}
+	&__listprice {
+		color: $c-primary;
+		font-size: $f-size-sm;
+		min-height: 12px;
+		span {
+			display: inline-block;
+			text-decoration: line-through;
+		}
+	}
+	&__installments {
+		min-height: 12px;
+		font-size: 11px;
+		color: $c-primary;
+	}
+	&__buybutton {
+		opacity: 0;
+	}
+
+}
