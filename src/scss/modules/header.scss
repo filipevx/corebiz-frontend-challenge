@@ -10,7 +10,7 @@
 	}
 	&__search {
 		position: relative;
-		width: 50%;
+		width: 60%;
 		padding: $s-sm 0;
 		border-bottom: 1px solid $c-primary;
 		input {
@@ -36,8 +36,10 @@
 		}
 	}
 	&__minicart {
-		display: flex;
-		align-items: flex-end;
+		a {
+			display: flex;
+			align-items: flex-end;
+		}
 		svg {
 			margin-right: $s-xs;
 		}
