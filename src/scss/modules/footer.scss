@@ -3,6 +3,140 @@
 	color: $c-white;
 	&__newsletter {
 		background: $c-bg;
+		padding: ($s-md + 5) ($s-lg + 5);
+		text-align: center;
+		h3 {
+			font-size: 22px;
+			color: $c-thirdy;
+			font-weight: 700;
+			margin-bottom: 16px;
+		}
+		input {
+			height: 48px;
+			width: 100%;
+			max-width: 280px;
+			padding: 0 16px;
+			border-radius: 5px;
+			border: none;
+			margin: 0 5px;
+		}
+		button {
+			width: 100%;
+			max-width: 140px;
+			background: $c-black;
+			color: $c-white;
+			height: 48px;
+			border-radius: 5px;
+			margin-left: 5px;
+			transition: $t-normal;
+			&:hover {
+				background: $c-red;
+			}
+		}
+	}
+	&__main {
+		padding: 25px;
+		.container {
+			display: grid;
+			grid-template-columns: 33% 33% 33%;
+		}
+	}
+	&__area {
+		&--location {
+			h3 {
+				font-size: 20px;
+				margin-bottom: $s-md;
+				font-weight: 700;
+				&:after {
+					margin-top: 16px;
+					content: '';
+					display: block;
+					width: 100%;
+					max-width: 45px;
+					height: 5px;
+					background: $c-white;
+					transition: $t-normal;;
+				}
+				&:hover {
+					&:after {
+						max-width: 65px;
+						background: $c-red;
+					}
+				}
+			}
+
+			p, a {
+				color: $c-white;
+				font-size: 13px;
+				margin-bottom: 15px;
+			}
+			a:last-child {
+				margin-bottom: 0;
+			}
+			a {
+				transition: $t-normal;
+				&:hover {
+					color: $c-red;
+				}
+			}
+
+		}
+		&--contact {
+			padding-top: 20px;
+			a {
+				background: $c-white;
+				border-radius: 5px;
+				height: 38px;
+				padding: 10px 18px;
+				width: 100%;
+				max-width: 195px;
+				font-size: $f-size-sm;
+				font-weight: 700;
+				margin: 15px auto;
+				transition: $t-normal;
+				svg, span {
+					display: inline-block;
+					transition: $t-normal;
+				}
+				svg {
+					width: 10%;
+					vertical-align: top;
+					path {
+						transition: $t-normal;
+					}
+				}
+				span {
+					width: 90%;
+					padding-left: 10px;
+					vertical-align: bottom;
+				}
+				&:hover {
+					background: $c-red;
+					span {
+						color: $c-white;
+					}
+					svg {
+						path { fill: $c-white; }
+					}
+				}
+			}
+		}
+		&--powered {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			a {
+				padding: 0 15px;
+				path {
+					transition: $t-normal;
+				}
+				&:hover {
+					path {
+						fill: $c-red;
+					}
+				}
+			}
+		}
 	}
 }
 
