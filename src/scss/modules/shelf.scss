@@ -87,19 +87,19 @@
 		width: 68px;
 		height: 11px;
 		&--1 {
-			background-image: url('../img/Rating-1.png');
+    		background: url('../img/rating_sprites.png') -10px -10px;
 		}
 		&--2 {
-			background-image: url('../img/Rating-2.png');
+			background: url('../img/rating_sprites.png') -10px -41px;
 		}
 		&--3 {
-			background-image: url('../img/Rating-3.png');
+			background: url('../img/rating_sprites.png') -10px -72px;
 		}
 		&--4 {
-			background-image: url('../img/Rating-4.png');
+			background: url('../img/rating_sprites.png') -98px -103px;
 		}
 		&--5 {
-			background-image: url('../img/Rating-5.png');
+			background: url('../img/rating_sprites.png') -10px -134px;
 		}
 	}
 	&__bestprice {
