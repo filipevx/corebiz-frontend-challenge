@@ -9,7 +9,7 @@ header {
 	width: 100%;
 	background: $c-white;
 	z-index: 999;
-	border-bottom: 1px solid #fcfbfc;
+	border-bottom: 1px solid $c-bg;
 	.container {
 		display: flex;
 		justify-content: space-between;

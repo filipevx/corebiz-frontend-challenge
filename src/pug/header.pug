@@ -9,7 +9,7 @@
         include ../svg/site-logo-corebiz-preto-cinza.svg
         include ../svg/site-logo-corebiz-mobile.svg
     form.header__search(action='/busca')
-      input(type='text' placeholder='O que está procurando?' name="q")
+      input(type='text' placeholder='O que está procurando?' name="q" required="required")
       button(type='submit')
         include ../svg/icon-search.svg
     .header__account
