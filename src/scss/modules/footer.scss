@@ -85,12 +85,38 @@
 				background: $c-red;
 			}
 		}
+		@include mobile {
+			padding: 16px;
+			padding-top: 24px;
+			input {
+				margin-bottom: 20px;
+			}
+			button {
+				max-width: 100%;
+			}
+			h3 {
+				text-align: left;
+			}
+			#newsletter {
+				display: block;
+				> div {
+					max-width: 100%;
+					&.error span {
+						position: relative;
+						bottom: 10px;
+					}
+				}
+			}
+		}
 	}
 	&__main {
 		padding: 25px;
 		.container {
 			display: grid;
 			grid-template-columns: 33% 33% 33%;
+			@include tablet {
+				display: block;
+			}
 		}
 	}
 	&__area {
@@ -146,6 +172,9 @@
 				font-weight: 700;
 				margin: 15px auto;
 				transition: $t-normal;
+				@include tablet {
+					margin: 26px auto;
+				}
 				svg, span {
 					display: inline-block;
 					transition: $t-normal;
@@ -188,12 +217,13 @@
 					}
 				}
 			}
+			@include tablet {
+				a {
+					padding: 0 30px;
+				}
+			}
 		}
 	}
-}
-
-@include mobile {
-
 }
 
 
