@@ -175,14 +175,17 @@
 				color: $c-white;
 				font-size: 13px;
 				margin-bottom: 15px;
-			}
-			a:last-child {
-				margin-bottom: 0;
+				transition: $t-normal;
 			}
 			a {
-				transition: $t-normal;
+				&:last-child {
+					margin-bottom: 0;
+				}
 				&:hover {
 					color: $c-red;
+					p {
+						color: $c-red;
+					}
 				}
 			}
 
