@@ -16,12 +16,12 @@ $( document ).ready(function() {
 	    data.map(s =>
 	      $('.home__shelf .container ul.shelf').append(
 	        `<li class="shelf__item">
-	        	<a href="#linkproduto">
+	        	<a href="#linkproduto" title="${s.productName}">
 	          	<img class='shelf__image' loading='lazy' src="${s.imageUrl}" alt="${s.productName}" width="216" height="200"/>
 	          </a>
 			  ${ s.listPrice ? `<span class='shelf__flag shelf__flag--off'>off</span> </span>` : "" }
 	          <div class='shelf__content'>
-		          <a href="#linkproduto"><p class='shelf__name'>${s.productName}</p></a>
+		          <a href="#linkproduto" title="${s.productName}"><p class='shelf__name'>${s.productName}</p></a>
 		          <span class='shelf__rating shelf__rating--${s.stars}'>${s.stars}</span>
 		          ${ s.listPrice ? `<span class='shelf__listprice'>de <span>${((s.listPrice) / 100).toLocaleString("pt-BR", { style: "currency", currency: "BRL" }).replace('.', ',')}</span> </span>` : `<span class='shelf__listprice'></span>` }
 		          ${ s.listPrice ? `<span class='shelf__bestprice'> por ${((s.price) / 100).toLocaleString("pt-BR", { style: "currency", currency: "BRL" }).replace('.', ',')} </span>` : `<span class='shelf__bestprice'> ${((s.price) / 100).toLocaleString("pt-BR", { style: "currency", currency: "BRL" }).replace('.', ',')} </span>` }
