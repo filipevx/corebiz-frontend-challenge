@@ -40,7 +40,7 @@
 		}
 		&.js-loading {
 			font-size: 0;
-			opacity: .5;
+			opacity: .5 !important;
 			pointer-events: none;
 			&:after {
 				content: 'aguarde..';

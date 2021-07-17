@@ -73,18 +73,23 @@ $( document ).ready(function() {
 
 	function buyProduct() {
 		$('body').on('click', '.shelf__item .shelf__buybutton', function(){
+			let _self = $(this);
 			let counter = $('.header__minicart .minicart__counter span')
 			let quantity = counter.html()
 			let newquantity = parseInt(quantity) + 1
 			counter.html(newquantity)
 			sessionStorage.setItem('minicartCounter', newquantity);
-
+			
+			// simula acao de adicionar ao carrinho
 			$(this).addClass('js-loading')
-			$(this).after("<span class='shelf__alert'>o produto foi adicionado!</span>")
+			
+	    setTimeout(function(){ 
+	    	_self.removeClass('js-loading'); 
+	    	_self.after("<span class='shelf__alert'>o produto foi adicionado!</span>")
+	    }, 800);
 	    setTimeout(function(){ 
 	    	$('.shelf__alert').remove(); 
-	    	$('.shelf__item .shelf__buybutton').removeClass('js-loading'); 
-	    }, 800);
+	    }, 3000);
 		});
 	}
 	function newsLetterSend(dados) {
