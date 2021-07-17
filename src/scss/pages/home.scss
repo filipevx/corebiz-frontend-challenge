@@ -7,9 +7,9 @@
 		img {
 			width: 100%;
 			height: auto;
-			+ img {
-				display: none;
-			}
+		}
+		a + a {
+			display: none;
 		}
 	}
 	&__shelf {
