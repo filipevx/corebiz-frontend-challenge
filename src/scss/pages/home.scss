@@ -43,7 +43,18 @@
 			&--mobile {
 				display: none;
 			}
-		}		
+		}	
+	}
+	@include tablet {
+		&__shelf {
+			h2 {
+				padding-left: 12px;
+			}
+			.slick-dots {
+				bottom: -15px;
+			}
+		}	
+
 	}
 }
 

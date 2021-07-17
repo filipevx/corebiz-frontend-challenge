@@ -51,11 +51,12 @@ $( document ).ready(function() {
 	        slidesToScroll: 1,
 	        arrows: true,
 	        responsive: [{
-	          breakpoint: 768,
+	          breakpoint: 991,
 	          settings: {
 	            slidesToShow: 2,
 	            slidesToScroll: 1,
-	            dots: true
+	            dots: true,
+	            arrows: false
 	          }
 	        }]
 	    });

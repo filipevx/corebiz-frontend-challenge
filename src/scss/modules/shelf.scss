@@ -116,3 +116,18 @@
 		color: $c-primary;
 	}
 }
+
+@include tablet {
+	.shelf {
+		margin: 0;
+		&__item {
+			padding: 0 12px;
+		}
+		&__buybutton {
+			opacity: 1;
+		}
+		&__flag {
+			right: 12px;
+		}
+	}
+}

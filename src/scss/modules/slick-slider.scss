@@ -52,5 +52,10 @@
 				}
 			}
 		}
+		@include tablet {
+			li {
+				margin: 0 3px;
+			}
+		}
 	}
 }
