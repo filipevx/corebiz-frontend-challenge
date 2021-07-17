@@ -120,9 +120,10 @@ header {
 
 @include tablet { 	
 	header {
-		padding-top: 107px;
+		padding-top: 83px;
 	}
 	.header {
+		padding: $s-xs $s-md $s-sm;
 		.container {
 			display: block;
 			position: relative;
