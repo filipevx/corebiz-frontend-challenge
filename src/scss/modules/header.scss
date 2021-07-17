@@ -1,5 +1,15 @@
+header {
+	padding-top: 81px;
+}
 .header {
 	padding: $s-md;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: $c-white;
+	z-index: 999;
+	border-bottom: 1px solid #fcfbfc;
 	.container {
 		display: flex;
 		justify-content: space-between;
@@ -109,6 +119,9 @@
 }
 
 @include tablet { 	
+	header {
+		padding-top: 107px;
+	}
 	.header {
 		.container {
 			display: block;

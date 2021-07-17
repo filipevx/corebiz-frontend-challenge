@@ -40,7 +40,8 @@ $( document ).ready(function() {
 	        slidesToShow: 1,
 	        slidesToScroll: 1,
 	        arrows: false,
-	        dots: true
+	        dots: true,
+	        swipeToSlide: true
 	    });
 	}
 	function shelfSlick() {
@@ -50,6 +51,7 @@ $( document ).ready(function() {
 	        slidesToShow: 4,
 	        slidesToScroll: 1,
 	        arrows: true,
+	        swipeToSlide: true,
 	        responsive: [{
 	          breakpoint: 991,
 	          settings: {
@@ -79,7 +81,7 @@ $( document ).ready(function() {
 			let newquantity = parseInt(quantity) + 1
 			counter.html(newquantity)
 			sessionStorage.setItem('minicartCounter', newquantity);
-			
+
 			// simula acao de adicionar ao carrinho
 			$(this).addClass('js-loading')
 			
