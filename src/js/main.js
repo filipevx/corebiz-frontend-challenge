@@ -81,7 +81,6 @@ $( document ).ready(function() {
 		});
 	}
 	function newsLetterSend(dados) {
-			$("#newsletter").addClass('js-loading')
       $.ajax({
         contentType: 'application/json; charset=utf-8',
         type: 'POST',
@@ -100,9 +99,11 @@ $( document ).ready(function() {
 	function newsLetterSubmit() {
       $('#newsletter').submit(function(e){
         e.preventDefault();
+        $("#newsletter").addClass('js-loading')
     	$("#newsletter input").each(function(){
 	        if( !$(this).val() ) {
 	            $(this).parent('div').addClass('error');
+	            $("#newsletter").removeClass('js-loading')
 	        } else {
 	          $(this).parent('div').removeClass('error');
 		        newsLetterSend({

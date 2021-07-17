@@ -41,10 +41,13 @@
 			svg path {
 				transition: $t-normal;
 			}
-			&:hover {
+		}
+		&:hover {
+			button {
 				svg path {
 					fill: $c-red;
 				}
+				
 			}
 		}
 	}
