@@ -1,8 +1,12 @@
 //header
 .header 
   .container
-    a.header__logo(href='/' title='Corebiz')
+    button.header__menu(type='button')
+      include ../svg/icon-menu.svg
+    a.header__logo.header__logo--desktop(href='/' title='Corebiz')
       include ../svg/site-logo-corebiz-preto-cinza.svg
+    a.header__logo.header__logo--mobile(href='/' title='Corebiz')
+      include ../svg/site-logo-corebiz-mobile.svg
     .header__search
       input(type='text' placeholder='O que está procurando?')
       button(type='button')

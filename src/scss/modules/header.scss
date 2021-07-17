@@ -5,7 +5,13 @@
 		justify-content: space-between;
 		align-items: center;
 	}
+	&__menu {
+		display: none;
+	}
 	&__logo {
+		&--mobile {
+			display: none;
+		}
 		svg {
 			path {
 				transition: $t-normal;
@@ -95,5 +101,42 @@
 	}
 }
 
-@include mobile { 			
+@include tablet { 	
+	.header {
+		.container {
+			display: block;
+			position: relative;
+		}
+		&__logo {
+			text-align: center;
+			&--desktop {
+				display: none;
+			}
+			&--mobile {
+				display: block;
+			}
+		}
+		&__account {
+			display: none;
+		}
+		&__minicart {
+			position: absolute;
+			right: 0;
+			top: 10px;
+		}
+		&__menu {
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 10px;
+		}
+		&__search {
+			width: 100%;
+			padding: 18px 0 $s-xs;
+			button {
+				top: unset;
+				bottom: 5px;
+			}
+		}
+	}			
 }	
