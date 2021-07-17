@@ -24,7 +24,6 @@
 	}
 	&__buybutton {
 		opacity: 0;
-		transition: $t-normal;
 		width: 100%;
 		max-width: 125px;
 		margin-top: 8px;
@@ -35,21 +34,24 @@
 		font-size: $f-size-sm;
 		color: $c-white;
 		text-transform: uppercase;
+		transition: background $t-fast;
 		&:hover {
 			background: $c-red;
 		}
-		&--buy {
+		&.js-loading {
 			font-size: 0;
+			opacity: .5;
+			pointer-events: none;
 			&:after {
-				content: 'remover';
+				content: 'aguarde..';
 				font-size: $f-size-sm;
 			}
-		}
+		}	
 	}
 	&__content {
 		padding: 15px 0 25px;
 		text-align: center;
-		transition: $t-normal;
+		transition: $t-fast;
 		background: $c-white;
 		span {
 			display: block;
@@ -122,6 +124,15 @@
 		min-height: 12px;
 		font-size: 11px;
 		color: $c-primary;
+	}
+	&__alert {
+		position: absolute;
+	    bottom: 5px;
+	    left: 0;
+	    font-size: 12px;
+	    width: 100%;
+	    text-align: center;
+	    color: #f8475f;
 	}
 }
 

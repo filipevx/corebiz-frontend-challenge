@@ -9,12 +9,15 @@
 		display: none;
 	}
 	&__logo {
-		&--mobile {
-			display: none;
+		h1 {
+			font-size: 0 !important;
 		}
 		svg {
+			&:last-child {
+				display: none;
+			}
 			path {
-				transition: $t-normal;
+				transition: $t-fast;
 			}
 		}
 		&:hover {
@@ -37,9 +40,9 @@
 			position: absolute;
 			right: 0;
 			top: $s-sm;
-			transition: $t-normal;
+			transition: $t-fast;
 			svg path {
-				transition: $t-normal;
+				transition: $t-fast;
 			}
 		}
 		&:hover {
@@ -47,7 +50,7 @@
 				svg path {
 					fill: $c-red;
 				}
-				
+
 			}
 		}
 	}
@@ -58,12 +61,12 @@
 			svg {
 				margin-right: $s-xs;
 				path {
-					transition: $t-normal;
+					transition: $t-fast;
 				}
 			}
 			span {
 				color: $c-primary;
-				transition: $t-normal;
+				transition: $t-fast;
 			}
 			&:hover {
 				svg path{
@@ -82,7 +85,7 @@
 			svg {
 				margin-right: $s-xs;
 				path {
-					transition: $t-normal;
+					transition: $t-fast;
 
 				}
 			}
@@ -113,11 +116,15 @@
 		}
 		&__logo {
 			text-align: center;
-			&--desktop {
-				display: none;
-			}
-			&--mobile {
-				display: block;
+			svg {
+				margin: 0 auto;
+				&:first-child {
+					display: none;
+				}
+				&:last-child {
+					display: block;
+				}
+
 			}
 		}
 		&__account {

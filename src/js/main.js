@@ -78,6 +78,13 @@ $( document ).ready(function() {
 			let newquantity = parseInt(quantity) + 1
 			counter.html(newquantity)
 			sessionStorage.setItem('minicartCounter', newquantity);
+
+			$(this).addClass('js-loading')
+			$(this).after("<span class='shelf__alert'>o produto foi adicionado!</span>")
+	    setTimeout(function(){ 
+	    	$('.shelf__alert').remove(); 
+	    	$('.shelf__item .shelf__buybutton').removeClass('js-loading'); 
+	    }, 800);
 		});
 	}
 	function newsLetterSend(dados) {

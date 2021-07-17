@@ -37,12 +37,10 @@
 			display: flex;
     		justify-content: center;
     		input {
-    			transition: $t-normal;
+    			transition: $t-fast;
     		}
     		button {
-    			&:after {
-    				transition: unset;
-    			}
+    			transition: background $t-fast;
     		}
     		> div {
     			margin-right: 8px;
@@ -160,7 +158,7 @@
 					max-width: 45px;
 					height: 5px;
 					background: $c-white;
-					transition: $t-normal;;
+					transition: $t-fast;;
 				}
 			}
 			&:hover {
@@ -175,7 +173,7 @@
 				color: $c-white;
 				font-size: 13px;
 				margin-bottom: 15px;
-				transition: $t-normal;
+				transition: $t-fast;
 			}
 			a {
 				&:last-child {
@@ -202,19 +200,19 @@
 				font-size: $f-size-sm;
 				font-weight: 700;
 				margin: 15px auto;
-				transition: $t-normal;
+				transition: $t-fast;
 				@include tablet {
 					margin: 26px auto;
 				}
 				svg, span {
 					display: inline-block;
-					transition: $t-normal;
+					transition: $t-fast;
 				}
 				svg {
 					width: 10%;
 					vertical-align: top;
 					path {
-						transition: $t-normal;
+						transition: $t-fast;
 					}
 				}
 				span {
@@ -240,7 +238,7 @@
 			a {
 				padding: 0 15px;
 				path {
-					transition: $t-normal;
+					transition: $t-fast;
 				}
 				&:hover {
 					path {

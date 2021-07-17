@@ -3,13 +3,14 @@
   .container
     button.header__menu(type='button')
       include ../svg/icon-menu.svg
-    a.header__logo.header__logo--desktop(href='/' title='Corebiz')
-      include ../svg/site-logo-corebiz-preto-cinza.svg
-    a.header__logo.header__logo--mobile(href='/' title='Corebiz')
-      include ../svg/site-logo-corebiz-mobile.svg
-    .header__search
-      input(type='text' placeholder='O que está procurando?')
-      button(type='button')
+    a.header__logo(href='/' title='Corebiz')
+      h1 
+        | Corebiz
+        include ../svg/site-logo-corebiz-preto-cinza.svg
+        include ../svg/site-logo-corebiz-mobile.svg
+    form.header__search(action='/busca')
+      input(type='text' placeholder='O que está procurando?' name="q")
+      button(type='submit')
         include ../svg/icon-search.svg
     .header__account
       a(href='#account')
