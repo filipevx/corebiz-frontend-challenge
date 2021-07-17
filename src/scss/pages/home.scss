@@ -7,6 +7,9 @@
 		img {
 			width: 100%;
 			height: auto;
+			+ img {
+				display: none;
+			}
 		}
 	}
 	&__shelf {
