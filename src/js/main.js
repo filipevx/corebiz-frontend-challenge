@@ -33,7 +33,16 @@ $( document ).ready(function() {
 	    )	
     	shelfSlick()	
 	}
-
+	function bannerSlick() {
+	    $('.home__banner').slick({
+	        dots: false,
+	        infinite: true,
+	        slidesToShow: 1,
+	        slidesToScroll: 1,
+	        arrows: false,
+	        dots: true
+	    });
+	}
 	function shelfSlick() {
 	    $('.home__shelf .container ul.shelf').slick({
 	        dots: false,
@@ -106,6 +115,7 @@ $( document ).ready(function() {
       })
 	}
 
+	bannerSlick()
 	minicartCounter()
 	getProducts()
 	buyProduct()

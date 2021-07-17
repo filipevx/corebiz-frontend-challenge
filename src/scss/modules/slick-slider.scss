@@ -30,4 +30,27 @@
 	.slick-next {
 		right: 0;
 	}
+	.slick-dots {
+		position: absolute;
+		bottom: 15px;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		li {
+			display: inline-block;
+			margin: 0 6px;
+			button {
+				font-size: 0;
+				width: 10px;
+				height: 10px;
+				background: #BDBDBD;
+				border-radius: 100%;
+			}
+			&.slick-active {
+				button {
+					background: $c-red;
+				}
+			}
+		}
+	}
 }
