@@ -36,8 +36,13 @@
 		#newsletter {
 			display: flex;
     		justify-content: center;
-    		input, button {
+    		input {
     			transition: $t-normal;
+    		}
+    		button {
+    			&:after {
+    				transition: unset;
+    			}
     		}
     		> div {
     			margin-right: 8px;
@@ -64,16 +69,16 @@
     		&.js-loading {
     			position: relative;
     			input, button {
-    				opacity: .7;
+    				opacity: .5;
     				pointer-events: none;
     			}
-    			&:after {
-    				display: block;
-    				content: 'carregando...';
-    				font-size: 12px;
-    				color: $c-black;
-    				position: absolute;
-    				bottom: -15px;
+    			button {
+    				font-size: 0;
+    				&:after {
+    					content: 'Enviando...';
+    					display: block;
+    					font-size: 14px;
+    				}
     			}
     		}
 		}
@@ -100,9 +105,11 @@
 			height: 48px;
 			border-radius: 5px;
 			margin-left: 5px;
-			transition: $t-normal;
 			&:hover {
-				background: $c-red;
+				@include desktop {
+					background: $c-red;
+
+				}
 			}
 		}
 		@include mobile {
