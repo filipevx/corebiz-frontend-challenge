@@ -79,6 +79,7 @@ $( document ).ready(function() {
 		});
 	}
 	function newsLetterSend(dados) {
+			$("#newsletter").addClass('js-loading')
       $.ajax({
         contentType: 'application/json; charset=utf-8',
         type: 'POST',
@@ -87,8 +88,10 @@ $( document ).ready(function() {
       }).done(function(data) {
         console.log(data, 'success')
         $('.footer__newsletter').addClass('success')
+        $("#newsletter").removeClass('js-loading')
       }).fail(function(xhr, err){
         console.log(err, 'error')
+        $("#newsletter").removeClass('js-loading')
       })
 
 	}
@@ -99,7 +102,7 @@ $( document ).ready(function() {
 	        if( !$(this).val() ) {
 	            $(this).parent('div').addClass('error');
 	        } else {
-	            $(this).parent('div').removeClass('error');
+	          $(this).parent('div').removeClass('error');
 		        newsLetterSend({
 		          'email': $('#newsletter #email').val(),
 		          'name': $('#newsletter #name').val()

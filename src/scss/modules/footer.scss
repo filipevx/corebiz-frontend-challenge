@@ -36,6 +36,9 @@
 		#newsletter {
 			display: flex;
     		justify-content: center;
+    		input, button {
+    			transition: $t-normal;
+    		}
     		> div {
     			margin-right: 8px;
 				width: 100%;
@@ -56,6 +59,21 @@
 						border: 1px solid $c-error;
 					}
 				}
+    		}
+    		&.js-loading {
+    			position: relative;
+    			input, button {
+    				opacity: .7;
+    				pointer-events: none;
+    			}
+    			&:after {
+    				display: block;
+    				content: 'carregando...';
+    				font-size: 12px;
+    				color: $c-black;
+    				position: absolute;
+    				bottom: -15px;
+    			}
     		}
 		}
 		h3 {
