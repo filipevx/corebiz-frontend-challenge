@@ -5,6 +5,59 @@
 		background: $c-bg;
 		padding: ($s-md + 5) ($s-lg + 5);
 		text-align: center;
+		.container {
+			&--success {
+				display: none;
+				h4 {
+					color: $c-black;
+					font-size: $f-size-md;
+					font-weight: 700;
+				}
+				p {
+					color: $c-thirdy;
+					font-size: $f-size-sm;
+					margin-bottom: 15px;
+				}
+				button {
+					max-width: 328px;
+				}
+			}
+		}
+		&.success {
+			.container {
+				&--form {
+					display: none;
+				}
+				&--success {
+					display: block;
+				}
+			}			
+		}
+		#newsletter {
+			display: flex;
+    		justify-content: center;
+    		> div {
+    			margin-right: 8px;
+				width: 100%;
+				max-width: 280px;
+				span {
+					display: none;
+				}
+				&.error {
+					span {
+						display: block;
+						bottom: 0;
+						left: 0;
+						color: $c-error;
+						text-align: left;
+						padding: 5px;
+					}
+					input {
+						border: 1px solid $c-error;
+					}
+				}
+    		}
+		}
 		h3 {
 			font-size: 22px;
 			color: $c-thirdy;
@@ -14,7 +67,6 @@
 		input {
 			height: 48px;
 			width: 100%;
-			max-width: 280px;
 			padding: 0 16px;
 			border-radius: 5px;
 			border: none;

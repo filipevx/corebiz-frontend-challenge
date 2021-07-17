@@ -68,9 +68,49 @@ $( document ).ready(function() {
 			sessionStorage.setItem('minicartCounter', newquantity);
 		});
 	}
+	function newsLetterSend(dados) {
+      $.ajax({
+        contentType: 'application/json; charset=utf-8',
+        type: 'POST',
+        url: 'https://corebiz-test.herokuapp.com/api/v1/newsletter',
+        data: JSON.stringify(dados)
+      }).done(function(data) {
+        console.log(data, 'success')
+        $('.footer__newsletter').addClass('success')
+      }).fail(function(xhr, err){
+        console.log(err, 'error')
+      })
+
+	}
+	function newsLetterSubmit() {
+      $('#newsletter').submit(function(e){
+        e.preventDefault();
+    	$("#newsletter input").each(function(){
+	        if( !$(this).val() ) {
+	            $(this).parent('div').addClass('error');
+	        } else {
+	            $(this).parent('div').removeClass('error');
+		        newsLetterSend({
+		          'email': $('#newsletter #email').val(),
+		          'name': $('#newsletter #name').val()
+		        });
+	        } 
+	    })
+      })
+	}
+
+	function newsLetterReset() {
+      $('body').on('click', '.newsletter-reset', function(){
+      	$('.footer__newsletter').removeClass('success')
+      	$("#newsletter input").val('')
+      })
+	}
+
 	minicartCounter()
 	getProducts()
 	buyProduct()
+	newsLetterSubmit()
+	newsLetterReset()
 });  
 
 

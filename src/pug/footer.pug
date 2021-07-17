@@ -1,12 +1,20 @@
 // Footer
 .footer
   .footer__newsletter
-    .container
+    .container.container--form
       h3 Participe de nossas news com promoções e novidades!
-      form
-        input(type='text' placeholder='Digite seu nome')
-        input(type='email' placeholder='Digite seu email')
+      form#newsletter
+        div
+          input#name(type='text' placeholder='Digite seu nome')
+          span Preencha com seu nome completo
+        div
+          input#email(type='email' placeholder='Digite seu email')
+          span Preencha com um e-mail válido
         button(type='submit') Eu quero!
+    .container.container--success
+      h4 Seu e-mail foi cadastrado com sucesso!
+      p A partir de agora você receberá as novidade e ofertas exclusivas.
+      button.newsletter-reset(type='button') Cadastrar novo e-mail
   .footer__main
     .container
       .footer__area.footer__area--location
