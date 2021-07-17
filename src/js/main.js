@@ -52,7 +52,25 @@ $( document ).ready(function() {
 	    });
 	}
 
+	function minicartCounter() {
+		let counterSession = sessionStorage.getItem('minicartCounter');
+		if(counterSession) {
+			$('.header__minicart .counter span').html(counterSession)
+		}
+	}
+
+	function buyProduct() {
+		$('body').on('click', '.shelf__item .shelf__buybutton', function(){
+			let counter = $('.header__minicart .counter span')
+			let quantity = counter.html()
+			let newquantity = parseInt(quantity) + 1
+			counter.html(newquantity)
+			sessionStorage.setItem('minicartCounter', newquantity);
+		});
+	}
+	minicartCounter()
 	getProducts()
+	buyProduct()
 });  
 
 

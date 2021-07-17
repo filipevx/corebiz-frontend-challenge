@@ -31,6 +31,13 @@
 		&:hover {
 			background: $c-red;
 		}
+		&--buy {
+			font-size: 0;
+			&:after {
+				content: 'remover';
+				font-size: $f-size-sm;
+			}
+		}
 	}
 	&__content {
 		padding: 15px 0 25px;
