@@ -56,6 +56,10 @@
 		@include tablet {
 			li {
 				margin: 0 3px;
+				button {
+					width: 7px;
+					height: 7px;
+				}
 			}
 		}
 	}
