@@ -25,13 +25,15 @@
 				height: 5px;
 				background: #C0C0C0;
 				transition: $t-normal;;
-			}
-			&:hover {
+			}		
+		}
+		&:hover {
+			h2 {
 				&:after {
 					max-width: 65px;
 					background: $c-red;
 				}
-			}			
+			}
 		}
 	}
 	@include desktop {

@@ -1,5 +1,12 @@
 .shelf {
 	margin: 0 -45px;
+	&.shelf--loading {
+		background: #fcfbfc;
+		min-height: 400px;
+		.shelf__item {
+			opacity: 0;
+		}
+	}
 	&__flag {
 		position: absolute;
 		right: 40px;
@@ -122,12 +129,20 @@
 		margin: 0;
 		&__item {
 			padding: 0 12px;
+			&:hover {
+				.shelf__content {
+					background: #ffffff;
+				}
+			}
 		}
 		&__buybutton {
 			opacity: 1;
 		}
 		&__flag {
 			right: 12px;
+		}
+		&__name {
+			min-height: 24px;
 		}
 	}
 }

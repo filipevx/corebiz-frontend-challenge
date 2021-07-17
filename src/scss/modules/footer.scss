@@ -71,6 +71,7 @@
 			border-radius: 5px;
 			border: none;
 			margin: 0 5px;
+			cursor: text;
 		}
 		button {
 			width: 100%;
@@ -135,14 +136,15 @@
 					background: $c-white;
 					transition: $t-normal;;
 				}
-				&:hover {
+			}
+			&:hover {
+				h3 {
 					&:after {
 						max-width: 65px;
 						background: $c-red;
 					}
 				}
 			}
-
 			p, a {
 				color: $c-white;
 				font-size: 13px;

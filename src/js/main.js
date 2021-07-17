@@ -12,13 +12,11 @@ $( document ).ready(function() {
 	    })
 	}
 	function renderProducts(data) {
-		console.log(data)
-
 	    const _self = this;
 	    data.map(s =>
 	      $('.home__shelf .container ul.shelf').append(
 	        `<li class="shelf__item">
-	          <img class='shelf__image' src="${s.imageUrl}"/>
+	          <img class='shelf__image' loading='lazy' src="${s.imageUrl}" width="216" height="200"/>
 			  ${ s.listPrice ? `<span class='shelf__flag shelf__flag--off'>off</span> </span>` : "" }
 	          <div class='shelf__content'>
 		          <p class='shelf__name'>${s.productName}</p>
@@ -60,18 +58,20 @@ $( document ).ready(function() {
 	          }
 	        }]
 	    });
+	    setTimeout(function(){ $('.home__shelf .container ul.shelf').removeClass('shelf--loading') }, 150);
+	    
 	}
 
 	function minicartCounter() {
 		let counterSession = sessionStorage.getItem('minicartCounter');
 		if(counterSession) {
-			$('.header__minicart .counter span').html(counterSession)
+			$('.header__minicart .minicart__counter span').html(counterSession)
 		}
 	}
 
 	function buyProduct() {
 		$('body').on('click', '.shelf__item .shelf__buybutton', function(){
-			let counter = $('.header__minicart .counter span')
+			let counter = $('.header__minicart .minicart__counter span')
 			let quantity = counter.html()
 			let newquantity = parseInt(quantity) + 1
 			counter.html(newquantity)
